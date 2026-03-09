@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🍎 AP Lessons E-Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+
+*{margin:0; padding:0; box-sizing:border-box; font-family:'Baloo 2', cursive;}
+body{background:linear-gradient(to bottom,#ffd6d6,#ff9a9e); overflow-x:hidden;}
+
+#apple-container{position:fixed;width:100%;height:100%;pointer-events:none;z-index:-1;}
+
+header{
+  background:#ff3b3f;
+  padding:20px;
+  text-align:center;
+  border-bottom:6px solid #8b0000;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+.site-title{color:white; font-size:30px;}
+nav{margin-top:10px;}
+nav a{
+  text-decoration:none; color:white; background:#ff6f61; padding:8px 15px; border-radius:25px; margin:5px; display:inline-block; transition:0.3s;
+}
+nav a:hover{background:#8b0000; transform:scale(1.1);}
+
+section{padding:40px; max-width:1100px; margin:auto;}
+h2{text-align:center; font-size:30px; color:#8b0000; margin-bottom:20px;}
+h3 a{color:#ff3b3f; text-decoration:none;}
+h3 a:hover{text-decoration:underline;}
+
+.section-box{
+  background:white; padding:30px; border-radius:25px; box-shadow:0 8px 20px rgba(0,0,0,0.15); margin-bottom:40px;
+}
+
+.slideshow-container{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin:20px auto;
+}
+.photo-frame{
+  position: relative;
+  background:white;
+  width: 100%;
+  height: 300px;
+  padding:10px;
+  border-radius:20px;
+  border:5px solid #ff6f61;
+  box-shadow:0 6px 15px rgba(0,0,0,0.25);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.slide{display:none; width:100%; height:100%; display:flex; justify-content:center; align-items:center;}
+.slide img{max-width:100%; max-height:100%; border-radius:15px;}
+.prev, .next{
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background-color: rgba(0, 30, 90, 0.8);
+  color:white;
+  padding:10px 16px;
+  border-radius:50%;
+  border:none;
+  font-size:20px;
+  transition:0.3s;
+}
+.prev:hover, .next:hover{background-color:#0059b3;}
+.prev{left:-40px;}
+.next{right:-40px;}
+
+.caption{text-align:center; font-weight:600; margin-top:8px; color:#ff3b3f; font-size:1rem;}
+
+.video-frame{
+  width:100%;
+  max-width:800px;
+  height:450px;
+  margin:20px auto;
+  display:block;
+  border:6px solid #ff6f61;
+  border-radius:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+button.back-btn{
+  background:#ff6f61;
+  color:white;
+  padding:10px 25px;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+  margin-top:20px;
+}
+button.back-btn:hover{transform:scale(1.1);}
+
+/* Apple animation */
+@keyframes fall{to{transform:translateY(110vh);}}
+</style>
+</head>
+<body>
+<div id="apple-container"></div>
+
+<header>
+  <h1 class="site-title">🍎 E-Portfolio: AP Lessons 🍎</h1>
+  <nav>
+    <a href="intro.html">Main</a>
+    <a href="about.html">About me</a>
+    <a href="ICT.html">ICT</a>
+    <a href="Events.html">Events</a>
+    <a href="AP.html">AP</a>
+  </nav>
+</header>
+
+<section>
+<h2>📚 2ND Quarter AP Lessons</h2>
+
+<!-- Lesson 1 - Demand -->
+<div class="section-box">
+<h3><a href="Demand.pdf" target="_blank">Lesson1 - Demand</a></h3>
+<p>Demand ay ang dami ng produkto o serbisyo na nais at kayang bilhin ng mamimili sa iba’t ibang presyo sa isang takdang panahon. Ayon sa Batas ng Demand, kapag tumaas ang presyo ay bumababa ang demand, at kapag bumaba ang presyo ay tumataas ang demand (ceteris paribus o walang ibang nagbabago). Ipinapakita ito sa schedule of demand, demand curve, at demand function. Bukod sa presyo, nakakaapekto rin ang kita, panlasa, kaugnay na produkto, populasyon, at inaasahang presyo.</p>
+
+<div class="slideshow-container" id="demand-slideshow-2q">
+  <div class="photo-frame">
+    <div class="slide fade"><img src="https://tse1.mm.bing.net/th/id/OIP.MwxWbmPZW7u1KF5aRo9hMgHaFR?pid=Api&P=0&h=220" alt="demand"></div>
+    <div class="slide fade"><img src="https://4.bp.blogspot.com/-Qs1jerEd4Zk/XoW7B98RDfI/AAAAAAAAX7k/t7iZAbyDdmgUhA6gdmq7BBTYe9fBEkjaQCK4BGAYYCw/s400/Linear%2BDemand%2BFunction%2B-%2BDiagram%2B1.png" alt="demand function"></div>
+    <div class="slide fade"><img src="https://www.economicsonline.co.uk/content/images/2023/06/Supply-and-Demand-4.webp" alt="demand curve"></div>
+    <div class="slide fade"><img src="https://i.ytimg.com/vi/D2WgMDKJI6A/maxresdefault.jpg" alt="demand schedule"></div>
+  </div>
+  <button class="prev" onclick="changeSlide('demand-slideshow-2q', -1)">❮</button>
+  <button class="next" onclick="changeSlide('demand-slideshow-2q', 1)">❯</button>
+</div>
+
+<div class="caption">Demand</div>
+<iframe class="video-frame" src="https://www.youtube.com/embed/kXOGttpe7ZA" allowfullscreen></iframe>
+</div>
+
+<!-- Lesson 2 - Supply -->
+<div class="section-box">
+<h3><a href="Supply.pdf" target="_blank">Lesson2 - Supply</a></h3>
+<p>Ang supply ay tumutukoy sa dami ng mga produkto o serbisyo na handa at kayang ipagbili ng mga prodyuser sa iba’t ibang presyo sa loob ng isang takdang panahon. Karaniwan, kapag tumataas ang presyo, tumataas din ang dami ng supply — ito ay kilala bilang batas ng supply (law of supply).</p>
+
+<div class="slideshow-container" id="supply-slideshow-2q">
+  <div class="photo-frame">
+    <div class="slide fade"><img src="https://www.ezilearning.com/wp-content/uploads/2022/12/law-of-supply-graph.jpg" alt="supply"></div>
+    <div class="slide fade"><img src="https://tse1.mm.bing.net/th/id/OIP.e5Rt_OQUc1vS0Z3HlbBb2wHaFj?pid=Api&P=0&h=220" alt="supply function"></div>
+    <div class="slide fade"><img src="https://www.economicsonline.co.uk/content/images/2023/06/Supply-and-Demand-2.webp" alt="supply curve"></div>
+  </div>
+  <button class="prev" onclick="changeSlide('supply-slideshow-2q', -1)">❮</button>
+  <button class="next" onclick="changeSlide('supply-slideshow-2q', 1)">❯</button>
+</div>
+
+<div class="caption">Supply</div>
+<iframe class="video-frame" src="https://www.youtube.com/embed/LzokqT5Q2B4" allowfullscreen></iframe>
+</div>
+
+<!-- Lesson 3 - Elasticity -->
+<div class="section-box">
+<h3><a href="Elasticity.pdf" target="_blank">Lesson3 - Price Elasticity</a></h3>
+<p>Ang price elasticity ay tumutukoy sa kung gaano kalaki ang pagbabago sa dami ng demand o supply kapag nagbago ang presyo ng isang produkto. Ipinapakita nito kung gaano kasensitibo ang mga mamimili o prodyuser sa pagbabago ng presyo.</p>
+
+<div class="slideshow-container" id="elasticity-slideshow-2q">
+  <div class="photo-frame">
+    <div class="slide fade"><img src="https://www.investopedia.com/thmb/FhLbbJRZcWjFk6joCMB9A5rBxDM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Elasticity-b2850112af974101a248abfc6877f987.png" alt="elasticity"></div>
+    <div class="slide fade"><img src="https://cdn.educba.com/academy/wp-content/uploads/2019/11/Elasticity-Formula.jpg" alt="elasticity function"></div>
+    <div class="slide fade"><img src="https://image.slidesharecdn.com/angelastisidadngsuplay-150610092816-lva1-app6891/85/Elasticity-of-Supply-Filipino-8-320.jpg" alt="elasticity curve"></div>
+  </div>
+  <button class="prev" onclick="changeSlide('elasticity-slideshow-2q', -1)">❮</button>
+  <button class="next" onclick="changeSlide('elasticity-slideshow-2q', 1)">❯</button>
+</div>
+
+<div class="caption">Elasticity</div>
+<iframe class="video-frame" src="https://www.youtube.com/embed/1XXhpHJTglg" allowfullscreen></iframe>
+</div>
+
+<!-- Lesson 4 - Equilibrium -->
+<div class="section-box">
+<h3><a href="Equilibrium.pdf" target="_blank">Lesson4 - Equilibrium</a></h3>
+<p>Ang equilibrium ay ang punto kung saan magkakapantay ang dami ng demand at supply sa isang takdang presyo. Sa presyong ito, walang labis o kulang na produkto, kaya ito ang tinatawag na equilibrium price o presyo ng kasapatan.</p>
+
+<div class="slideshow-container" id="equilibrium-slideshow-2q">
+  <div class="photo-frame">
+    <div class="slide fade"><img src="https://www.ezilearning.com/wp-content/uploads/2022/12/Demand-and-supply-equilibrium-diagram.jpg" alt="equilibrium"></div>
+    <div class="slide fade"><img src="https://tse1.mm.bing.net/th/id/OIP.QTiCf2Xh0HaBUQ_N6YmlKwHaFj?pid=Api&P=0&h=220" alt="equilibrium shortage"></div>
+    <div class="slide fade"><img src="https://cdn.corporatefinanceinstitute.com/assets/economic-equilibrium1-1024x664.png" alt="equilibrium curve"></div>
+    <div class="slide fade"><img src="https://slidetodoc.com/presentation_image_h2/db34c04ec4780e93c9b1f9edd0fd3b77/image-7.jpg" alt="equilibrium surplus"></div>
+  </div>
+  <button class="prev" onclick="changeSlide('equilibrium-slideshow-2q', -1)">❮</button>
+  <button class="next" onclick="changeSlide('equilibrium-slideshow-2q', 1)">❯</button>
+</div>
+
+<div class="caption">Equilibrium</div>
+<iframe class="video-frame" src="https://www.youtube.com/embed/PEMkfgrifDw" allowfullscreen></iframe>
+</div>
+
+<!-- Lesson 5 - Estraktura ng Pamilihan -->
+<div class="section-box">
+<h3><a href="Pamilihan.pdf" target="_blank">Lesson5 - Iba’t-ibang Estraktura ng Pamilihan</a></h3>
+<p>Ang iba’t ibang estruktura ng pamilihan ay tumutukoy sa pagkakaiba-iba ng mga anyo ng pamilihan batay sa bilang ng nagbebenta at mamimili, uri ng produkto, at antas ng kompetisyon. Ipinapakita nito kung paano nagtatakda ng presyo at nagkakaroon ng ugnayan ang mga prodyuser at mamimili sa ekonomiya.</p>
+
+<div class="slideshow-container" id="pamilihan-slideshow-2q">
+  <div class="photo-frame">
+    <div class="slide fade"><img src="https://image.slidesharecdn.com/economicsestrukturangpamilihan-160419125711/85/Economics-estruktura-ng-pamilihan-8-320.jpg" alt="monopolyo"></div>
+    <div class="slide fade"><img src="https://image.slidesharecdn.com/economicsestrukturangpamilihan-160419125711/85/Economics-estruktura-ng-pamilihan-16-320.jpg" alt="monopolistikong competition"></div>
+    <div class="slide fade"><img src="https://image.slidesharecdn.com/istrukturangpamilihan-250127013619-0e25e320/85/Istruktura-ng-Pamilihan-ppt-aralin-sa-Ekonomiks-20-320.jpg" alt="monopsony"></div>
+    <div class="slide fade"><img src="https://image.slidesharecdn.com/istrukturangpamilihan-250127013619-0e25e320/85/Istruktura-ng-Pamilihan-ppt-aralin-sa-Ekonomiks-21-320.jpg" alt="oligopolyo"></div>
+  </div>
+  <button class="prev" onclick="changeSlide('pamilihan-slideshow-2q', -1)">❮</button>
+  <button class="next" onclick="changeSlide('pamilihan-slideshow-2q', 1)">❯</button>
+</div>
+
+<div class="caption">Iba’t-ibang Estraktura ng Pamilihan</div>
+<iframe class="video-frame" src="https://www.youtube.com/embed/Wfjpcq7zzis" allowfullscreen></iframe>
+</div>
+
+<!-- Lesson 6 - Pamahalaan sa Regulasyon -->
+<div class="section-box">
+<h3><a href="Pamahalaan.pdf" target="_blank">Lesson6 - Pamahalaan sa Regulasyon ng mga Gawaing Pangkabuhayan</a></h3>
+<p>Ang pamahalaan sa regulasyon ng mga gawaing pangkabuhayan ay tumutukoy sa papel ng gobyerno sa pagkontrol at pagsasaayos ng mga aktibidad sa ekonomiya upang mapanatili ang kaayusan, patas na kompetisyon, at kapakanan ng mamamayan.</p>
+
+<div class="slideshow-container" id="pamahalaan-slideshow-2q">
+  <div class="photo-frame">
+    <div class="slide fade"><img src="https://image.slidesharecdn.com/mgapatakaranatprogramangpangkabuhayanngpamahalaan-170209140514/95/mga-patakaran-at-programang-pangkabuhayan-ng-pamahalaan-4-638.jpg?cb=1486649163" alt="pamahalaan"></div>
+    <div class="slide fade"><img src="https://tse1.mm.bing.net/th/id/OIP.BN0TOCWaktklwIELyX4E5QHaFj?pid=Api&P=0&h=220" alt="pamilihan vs pamahalaan"></div>
+  </div>
+  <button class="prev" onclick="changeSlide('pamahalaan-slideshow-2q', -1)">❮</button>
+  <button class="next" onclick="changeSlide('pamahalaan-slideshow-2q', 1)">❯</button>
+</div>
+
+<div class="caption">Pamahalaan sa Regulasyon ng mga Gawaing Pangkabuhayan</div>
+<iframe class="video-frame" src="https://www.youtube.com/embed/QkLy8cjmHAo" allowfullscreen></iframe>
+</div>
+
+</section>
+
+<section>
+<h2>📚 4TH Quarter AP Lessons</h2>
+
+<!-- Lesson 1 - Pambansang Kaunlaran -->
+<div class="section-box">
+<h3><a href="Pambansang Kaunlaran.pdf" target="_blank">Lesson1 - Pambansang Kaunlaran</a></h3>
+<p>Ang pambansang kaunlaran ay tumutukoy sa isang estado kung saan ang mga mamamayan, lalo na ang mga nasa pinakamababang uri, ay nakatatamasa ng nakakamanghang pagbabago sa kanilang ekonomiya at pamumuhay. Mahalagang maunawaan ang pagkakaiba ng mga konsepto nito: ang pag-unlad ay isang progresibo at aktibong proseso, samantalang ang pagsulong ay ang nakikita at nasusukat na produkto ng prosesong ito. 
+<br><br>Ayon kay Amartya Sen, ang tunay na kaunlaran ay matatamo lamang kung mapauunlad ang yaman ng buhay ng mga tao kaysa sa yaman ng ekonomiya lamang.Bilang pangunahing sukatang ginagamit ng United Nations, ang Human Development Index (HDI) ay tinitingnan ang pangkalahatang kakayahan ng isang bansa na matugunan ang mahahalagang aspekto ng kaunlarang pantao. Nakatuon ito sa tatlong pangunahing aspeto: kalusugan, edukasyon, at antas ng pamumuhay. Ang mga bansang may mataas na GDP, income per capita, at mataas na HDI ay itinuturing na "Developed Economies," habang ang mga bansang kulang sa industriyalisasyon at mababa ang mga nabanggit na sukatan ay tinatawag na "Underdeveloped Economies".
+</p>
+<div class="slideshow-container" id="pambansang-kaunlaran-slideshow-4q">
+  <div class="photo-frame">
+    <div class="slide fade"><img src="p1.png" alt="pambansang kaunlaran"></div>
+    <div class="slide fade"><img src="p2.png" alt="pambansang kaunlaran2"></div>
+    <div class="slide fade"><img src="p3.png" alt="pambansang kaunlaran3"></div>
+    <div class="slide fade"><img src="p4.png" alt="pambansang kaunlaran4"></div>
+  </div>
+  <button class="prev" onclick="changeSlide('pambansang-kaunlaran-slideshow-4q', -1)">❮</button>
+  <button class="next" onclick="changeSlide('pambansang-kaunlaran-slideshow-4q', 1)">❯</button>
+</div>
+
+<div class="caption">Pambansang Kaunlaran</div>
+<iframe class="video-frame" src="https://www.youtube.com/embed/3U_EbYXqkBA" allowfullscreen></iframe>
+</div>
+
+<!-- Lesson 2 - Supply -->
+<div class="section-box">
+<h3><a href="Agrikultura.pdf" target="_blank">Lesson2 - Sektor ng Agrikultura</a></h3>
+<p>Ang agrikultura ay isang agham at sining na may kinalaman sa paglilinang ng lupa at pagpaparami ng mga hayop at halaman. Nahahati ang sektor na ito sa apat na pangunahing gawain: pagsasaka na nagbibigay ng mga pangunahing pananim gaya ng palay at mais; pangingisda na nauuri sa komersiyal, munisipal, at aquaculture; paghahayupan para sa karne at iba pang produkto; at paggugubat na pinagkukunan ng mga materyales tulad ng troso at rattan.Napakahalaga ng sektor na ito dahil ito ang pangunahing pinagmumulan ng pagkain at hilaw na materyales na kailangan upang makabuo ng mga panibagong produkto sa ibang sektor. 
+<br><br>Nagbibigay din ito ng trabaho sa maraming Pilipino at nagpapasok ng dolyar sa bansa sa pamamagitan ng pagluluwas ng mga produkto. Gayunpaman, nahaharap ito sa mga suliranin tulad ng pagliit ng lupang sakahan, kakulangan sa imprastraktura, at epekto ng climate change. </p>
+<div class="slideshow-container" id="supply-slideshow">
+  <div class="photo-frame">
+    <div class="slide fade">
+      <img src="g1.png" alt="supply">
+    </div>
+    <div class="slide fade">
+      <img src="g2.png" alt="supply function">
+    </div>
+    <div class="slide fade">
+      <img src="g3.png" alt="supply curve">
+    </div>
+    <div class="slide fade">
+      <img src="g4.png" alt="supply schedule">
+    </div>
+  </div>
+  <button class="prev" onclick="changeSlide('supply-slideshow', -1)">❮</button>
+  <button class="next" onclick="changeSlide('supply-slideshow', 1)">❯</button>
+</div>
+
+
+<div class="video-container">
+    <div class="caption">Sektor ng Agrikultura</div>
+    <iframe class="video-frame" 
+            src="https://www.youtube.com/embed/KSYF5aJYt-A" 
+            allowfullscreen>
+    </iframe>
+</div>
+</div>
+<!-- Lesson 3 - Elasticity -->
+<div class="section-box">
+<h3><a href="Industriya.pdf" target="_blank">Lesson3 - Sektor ng Industriya</a></h3>
+<p>Ang sektor ng industriya ay tumutukoy sa pagproseso ng mga hilaw na materyal upang makabuo ng mga produkto na kinakailangan ng tao at ng pamilihan. Binubuo ito ng apat na sub-sektor: Pagmimina (pagkuha ng mineral), Pagmamanupaktura (paggawa ng produkto gamit ang makina o manual labor), Konstruksyon (pagtatayo ng mga gusali at imprastraktura), at Utilities (paghahatid ng tubig, kuryente, at gas).Malaki ang papel ng industriya sa pambansang kaunlaran dahil ito ang tumatanggap ng mga produkto mula sa agrikultura at nagpoproseso sa mga ito upang madagdagan ang kanilang halaga. 
+<br><br>Sa pamamagitan ng paggamit ng makabagong teknolohiya, nakagagawa ito ng mga intermediate products na kailangan sa paggawa ng iba pang kalakal. Ang ugnayan ng agrikultura at industriya ay makikita sa paggamit ng mga magsasaka ng mga makinaryang gawa ng industriya upang mapataas ang kanilang produksyon. </p>
+<div class="slideshow-container" id="elasticity-slideshow">
+  <div class="photo-frame">
+    <div class="slide fade">
+      <img src="y1.png" alt="elasticity">
+    </div>
+    <div class="slide fade">
+      <img src="y2.png" alt="elasticity function">
+    </div>
+    <div class="slide fade">
+      <img src="y3.png" alt="elasticity curve">
+    </div>
+    <div class="slide fade">
+      <img src="y4.png" alt="elasticity schedule">
+    </div>
+  </div>
+  <button class="prev" onclick="changeSlide('elasticity-slideshow', -1)">❮</button>
+  <button class="next" onclick="changeSlide('elasticity-slideshow', 1)">❯</button>
+</div>
+
+<div class="video-container">
+    <div class="caption">Sektor ng Industriya</div>
+    <iframe class="video-frame" 
+            src="https://www.youtube.com/embed/QEEtuY0vqyk" 
+            allowfullscreen>
+    </iframe>
+</div>
+</div>
+<!-- Lesson 4 - Equilibrium -->
+<div class="section-box">
+<h3><a href="Paglilingkod.pdf" target="_blank">Lesson4 - Sektor ng Paglilingkod</a></h3>
+<p>Ang sektor ng paglilingkod, na kilala rin bilang tersaryang sektor, ang siyang umaalalay sa buong yugto ng produksyon, distribusyon, at pagkonsumo ng mga produkto sa loob at labas ng bansa. Kabilang sa pormal na bahagi nito ang transportasyon at komunikasyon, kalakalan (pagpapalitan ng produkto), pananalapi (bangko at insurance), at mga paupahang bahay o real estate. Ang layunin nito ay tiyakin ang maayos na pag-iimbak at pagtitinda ng mga kalakal upang makarating ito sa mga mamimili.
+<br><br>Mahalaga ang sektor na ito sa pagpapataas ng GDP ng bansa at sa pagkakaloob ng lakas-paggawa at kasanayan para sa kaunlarang pang-ekonomiya. Upang matiyak ang kahusayan at proteksyon ng mga manggagawa, may mga ahensyang tulad ng DOLE, TESDA, at PRC na nangangasiwa sa kanilang kapakanan at pagsasanay. Ang batas gaya ng Labor Code at mga probisyon sa tamang pasahod at benepisyo ay ipinatutupad upang mapangalagaan ang karapatan ng mga Pilipinong manggagawa. </p>
+<div class="slideshow-container" id="equilibrium-slideshow">
+  <div class="photo-frame">
+    <div class="slide fade">
+      <img src="k1.png" alt="equilibrium">
+    </div>
+    <div class="slide fade">
+      <img src="k2.png" alt="equilibrium shortage">
+    </div>
+    <div class="slide fade">
+      <img src="k3.png" alt="equilibrium curve">
+    </div>
+    <div class="slide fade">
+      <img src="k4.png" alt="equilibrium surplus">
+    </div>
+  </div>
+  <button class="prev" onclick="changeSlide('equilibrium-slideshow', -1)">❮</button>
+  <button class="next" onclick="changeSlide('equilibrium-slideshow', 1)">❯</button>
+</div>
+
+<div class="video-container">
+    <div class="caption">Sektor ng Paglilingkod</div>
+    <iframe class="video-frame" 
+            src="https://www.youtube.com/embed/AhaDOS-kf9w" 
+            allowfullscreen>
+    </iframe>
+</div>
+</div>
+<!-- Lesson 5 - Iba’t-ibang Estraktura ng Pamilihan -->
+<div class="section-box">
+<h3><a href="Impormal.pdf" target="_blank">Lesson5 - Impormal na Sektor</a></h3>
+<p>Ang impormal na sektor, o "Underground Economy," ay binubuo ng mga gawaing pang-ekonomiya na salat sa mga pormal na dokumento at hindi nakarehistro sa pamahalaan. Dahil hindi ito opisyal na nakatala, ang kita mula rito ay hindi naisasama sa pagkalkula ng kabuuang Gross Domestic Product (GDP) ng bansa. Karaniwang halimbawa ng mga taong kabilang dito ay ang mga nagtitinda sa kalsada, pedicab drivers, at mga hindi rehistradong pampublikong sasakyan.Nagsisilbi itong paraan ng mga mamamayan upang magkaroon ng kabuhayan o dagdag na kita sa panahon ng pangangailangan, ngunit mayroon din itong mga negatibong epekto. <br><br>
+Kabilang sa mga epektong ito ang pagbaba ng koleksyon ng buwis ng pamahalaan at posibleng banta sa kapakanan ng mga mamimili dahil sa kawalan ng regulasyon. Upang matugunan ito, may mga batas tulad ng Social Reform and Poverty Alleviation Act na naglalayong iahon sa kahirapan ang mga nasa sektor na ito. </p>
+<div class="slideshow-container" id="pamilihan-slideshow">
+  <div class="photo-frame">
+    <div class="slide fade">
+      <img src="o1.png" alt="monopolyo">
+    </div>
+    <div class="slide fade">
+      <img src="o2.png" alt="monopolistikong competition">
+    </div>
+    <div class="slide fade">
+      <img src="o3.png" alt="monopsony">
+    </div>
+    <div class="slide fade">
+      <img src="o4.png" alt="oligopoly">
+    </div>
+  </div> <!-- closes photo-frame -->
+  <button class="prev" onclick="changeSlide('pamilihan-slideshow', -1)">❮</button>
+  <button class="next" onclick="changeSlide('pamilihan-slideshow', 1)">❯</button>
+</div> <!-- closes slideshow-container -->
+
+<div class="video-container">
+    <div class="caption">Kalakalang Panlabas</div>
+    <iframe class="video-frame" 
+            src="https://www.youtube.com/embed/NtyBpUR7Ko8" 
+            allowfullscreen>
+    </iframe>
+</div>
+</div>
+</div> 
+<!-- Lesson 6 - Pamahalaan sa Regulasyon ng mga Gawaing Pangkabuhayan -->
+<div class="section-box">
+<h3><a href="Kalakalan.pdf" target="_blank">Lesson6 - Kalakalang Panlabas</a></h3>
+<p>Ang kalakalang panlabas ay ang palitan ng produkto at serbisyo sa pagitan ng mga bansa dahil walang bansa ang kayang matugunan ang lahat ng kanyang pangangailangan nang mag-isa. Binubuo ito ng dalawang pangunahing proseso: Eksport o pagluluwas ng sariling produkto sa ibang bansa, at Import o pagbili ng mga kalakal mula sa labas. Ang World Trade Organization (WTO) ang pangunahing samahang namamahala sa pandaigdigang patakaran ng sistema ng kalakalan sa pagitan ng mga kasaping estado.Bagaman nagbibigay ito ng mas maraming mapagpipiliang produkto at nagpapataas ng kalidad ng mga bilihin, mayroon din itong mga hamon. <br><br>
+Maaaring maging palaasa ang mga mamamayan sa mga produktong imported at hindi malinang ang lokal na pagkamalikhain. Upang protektahan ang lokal na ekonomiya, gumagamit ang pamahalaan ng mga instrumentong tulad ng taripa (buwis sa inaangkat), quota (limitasyon sa dami), at subsidy (tulong sa lokal na produksyon) </p>
+<div class="slideshow-container" id="pamahalaan-slideshow">
+  <div class="photo-frame">
+    <div class="slide fade">
+      <img src="ss1.png" alt="pamahalaan">
+    </div>
+    <div class="slide fade">
+      <img src="ss2.png" alt="pamilihan vs pamahalaan">
+    </div>
+	<div class="slide fade">
+      <img src="ss3.png" alt="pamahalaan">
+    </div>
+    <div class="slide fade">
+      <img src="ss4.png" alt="pamilihan vs pamahalaan">
+    </div>
+  </div>
+  <button class="prev" onclick="changeSlide('pamahalaan-slideshow', -1)">❮</button>
+  <button class="next" onclick="changeSlide('pamahalaan-slideshow', 1)">❯</button>
+</div>
+
+<div class="video-container">
+    <div class="caption">Kalakalang Panlabas</div>
+    <iframe class="video-frame" 
+            src="https://www.youtube.com/embed/mftIEF_yV5Y" 
+            allowfullscreen>
+    </iframe>
+</div>
+</div>
+<div style="text-align:center;">
+<a href="Events.html"><button class="back-btn">← Back</button></a>
+</div>
+</section>
+
+<script>
+// Slideshow JS
+let slideIndexes = {};
+function showSlide(slideshowId, n) {
+  const container = document.getElementById(slideshowId);
+  const slides = container.querySelectorAll('.slide');
+  if(!slideIndexes[slideshowId]) slideIndexes[slideshowId] = 0;
+
+  slideIndexes[slideshowId] += n;
+  if(slideIndexes[slideshowId] >= slides.length) slideIndexes[slideshowId] = 0;
+  if(slideIndexes[slideshowId] < 0) slideIndexes[slideshowId] = slides.length - 1;
+
+  slides.forEach((s,i)=> s.style.display = i === slideIndexes[slideshowId] ? 'flex' : 'none');
+}
+function changeSlide(slideshowId, n){ showSlide(slideshowId, n); }
+
+// Initialize all slides
+document.querySelectorAll('.slideshow-container').forEach(c=>{
+  const slides = c.querySelectorAll('.slide');
+  if(slides.length>0) slides.forEach(s=>s.style.display='none');
+  if(slides.length>0) slides[0].style.display='flex';
+  slideIndexes[c.id] = 0;
+});
+
+// Apple falling animation
+function createApple(){
+  const apple=document.createElement("div");
+  apple.innerHTML="🍎";
+  apple.style.position="absolute";
+  apple.style.left=Math.random()*100+"vw";
+  apple.style.fontSize=Math.random()*30+20+"px";
+  apple.style.top="-50px";
+  apple.style.animation=`fall ${Math.random()*5+5}s linear`;
+  document.getElementById("apple-container").appendChild(apple);
+  setTimeout(()=>{apple.remove();},10000);
+}
+setInterval(createApple,800);
+</script>
+</body>
+</html>

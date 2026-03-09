@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>🍎 Apple Cartoon ICT Space</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+
+  /* Horizontal Gallery */
+  .gallery {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    overflow-x:auto;
+    padding:20px 0;
+    scroll-behavior: smooth;
+  }
+
+  .gallery img{
+    width:280px;
+    height:280px;
+    border:4px solid #ff6f61;
+    border-radius:20px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.3);
+    transition:0.4s;
+    cursor:pointer;
+    flex-shrink:0;
+  }
+
+  .gallery img:hover{
+    transform:scale(1.15) rotate(-2deg);
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+  }
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Baloo 2', cursive;
+}
+
+body{
+  background:linear-gradient(to bottom,#ffd6d6,#ff9a9e);
+  overflow-x:hidden;
+}
+
+/* Floating apples */
+#apple-container{
+  position:fixed;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:-1;
+}
+
+header{
+  background:#ff3b3f;
+  padding:20px;
+  text-align:center;
+  border-bottom:6px solid #8b0000;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.site-title{
+  color:white;
+  font-size:30px;
+}
+
+nav{
+  margin-top:10px;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  background:#ff6f61;
+  padding:8px 15px;
+  border-radius:25px;
+  margin:5px;
+  display:inline-block;
+  transition:0.3s;
+}
+
+nav a:hover{
+  background:#8b0000;
+  transform:scale(1.1);
+}
+
+section{
+  padding:40px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  font-size:30px;
+  color:#8b0000;
+  margin-bottom:20px;
+}
+
+/* SCROLL GALLERY */
+.gallery-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  overflow:hidden;
+  margin:30px 0;
+}
+
+.scroll-gallery{
+  display:flex;
+  align-items:center;
+  white-space:nowrap;
+  animation:scroll 8s linear infinite;
+}
+
+.scroll-gallery img{
+  width:250px;
+  margin-right:15px;
+  border-radius:25px;
+  border:5px solid #ff6f61;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+  transition:0.1s;
+}
+
+.scroll-gallery img:hover{
+  transform:scale(1.1) rotate(-2deg);
+}
+
+@keyframes scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* SECTION BOX */
+.section-box{
+  background:white;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  margin-bottom:40px;
+}
+
+.section-box a{
+  text-decoration:none;
+  color:#ff3b3f;
+  font-weight:700;
+  font-size:22px;
+}
+
+.section-box p{
+  margin-top:15px;
+  text-align:justify;
+}
+
+/* YOUTUBE */
+.video-wrap{
+  max-width:800px;
+  margin:25px auto 50px;
+  aspect-ratio:16/9;
+  background:#8b0000;
+  border:6px solid #ff6f61;
+  border-radius:30px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
+  overflow:hidden;
+}
+
+.video-wrap iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* Buttons */
+button{
+  padding:10px 25px;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  margin:10px;
+  transition:0.3s;
+  color:white;
+}
+
+.back-btn{ background:#ff6f61; }
+.next-btn{ background:#8b0000; }
+
+button:hover{
+  transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<div id="apple-container"></div>
+
+<header>
+  <h1 class="site-title">🍎 E-Portfolio: AP & ICT 🍎</h1>
+  <nav>
+    <a href="intro.html">Main</a>
+    <a href="about.html">About me</a>
+    <a href="ICT.html">ICT</a>
+    <a href="Events.html">Events</a>
+    <a href="AP.html">AP</a>
+  </nav>
+</header>
+
+<section>
+<h2>🍎 1ST Quarter ICT Lessons 🍎</h2>
+
+<!-- TOP GALLERY -->
+<div class="gallery-wrapper">
+  <div class="scroll-gallery">
+    <img src="11.png">
+    <img src="12.png">
+    <img src="13.png">
+    <img src="14.png">
+    <img src="15.png">
+  </div>
+</div>
+
+<!-- LESSON 1 -->
+<div class="section-box">
+<a href="Q1L1.pdf" target="_blank">Lesson 1: Introduction to Hyperlinks</a>
+<p>
+Lesson 1 introduces hyperlinks as essential navigational elements in web design that allow users to move between different pages or documents. These links are created using the a (anchor) tag, where the href attribute specifies the destination URL. Hyperlinks can be represented as underlined colored text or as clickable images, providing a versatile way to connect web content.
+<br><br>
+The lesson also explains the interactive states of a hyperlink, which include Hover (when the cursor is placed over it), Active (the moment it is clicked), and Visited (after the resource has been accessed). Understanding these states is crucial for creating a user-friendly interface that provides visual feedback to the visitor during navigation.
+</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube-nocookie.com/embed/ZOI7Tq5Zq2s?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 2 -->
+<div class="section-box">
+<a href="Q1L2.pdf" target="_blank">Lesson 2: Hyperlink Targets and Email Links</a>
+<p>
+This lesson focuses on the target attribute, which defines where a linked document will open, such as in the same window (_self) or a new one (_blank). It also introduces "named anchors," which are invisible markers within a document used to create internal links that jump to specific sections of the same page.Additionally, Lesson 2 covers the creation of email links using the mailto: value within the href attribute. This functionality allows users to communicate with web owners easily by automatically opening their default email client with a pre-addressed message.
+</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube-nocookie.com/embed/kSSn2a9V0Io?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 3 -->
+<div class="section-box">
+<a href="Q1L3.pdf" target="_blank">Lesson 3: Types of Links and Media Integration</a>
+<p>
+Lesson 3 distinguishes between external and internal links, where external links lead to different websites and internal links connect pages within the same site. It also warns about "dead links," which occur when a targeted file no longer exists, leading to common errors like "404 File Not Found".The lesson further demonstrates how to use graphics, such as GIFs or images, as clickable links by nesting an img tag inside an anchor tag. This allows designers to create more visually engaging navigation menus beyond standard text-based links.
+</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube-nocookie.com/embed/HA6bByKdAQM?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 4 -->
+<div class="section-box">
+<a href="Q1L4.pdf" target="_blank">Lesson 4: HTML5 Input Controls and Forms</a>
+<p>
+Lesson 4 explores the enhanced input controls and validation features introduced in HTML5, which are designed to make web forms easier to fill out. It details various input types such as color, date, email, number, and range, each providing a specific interface for data entry.The material also introduces the broader context of form processing, noting that while HTML5 handles the front-end structure, the actual data submission is often managed by server-side technologies like ASP or PHP. These technologies allow for the creation of dynamic web pages that can process and store user information.
+</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube-nocookie.com/embed/VLeERv_dR6Q?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 5 -->
+<div class="section-box">
+<a href="Q1L5.pdf" target="_blank">Lesson 5: The Input Element and Attributes</a>
+<p>
+This lesson takes a closer look at the input tag, an empty tag used to create various form components like textboxes, radio buttons, and checkboxes. The behavior of the input field is determined by the type attribute, while other attributes like name and value are used to identify the field and set its initial content.It also discusses specialized attributes like checked, which is used for radio buttons and checkboxes to set a default selection without requiring a specific value. The lesson provides examples of how different attributes, such as size, can be used to customize the appearance of these input fields.
+</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube-nocookie.com/embed/yMX901oVtn8?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 6 -->
+<div class="section-box">
+<a href="Q1L6.pdf" target="_blank">Lesson 6: Selection Controls - Radio Buttons and Checkboxes</a>
+<p>
+Lesson 6 focuses on two primary selection controls: radio buttons and checkboxes. Radio buttons are used when a user must choose exactly one option from a set of few choices, and they are grouped together using the same name attribute.In contrast, checkboxes allow users to select multiple options—or none at all—from a list. Both controls can use the checked attribute to pre-select options for the user, improving the efficiency of the form completion process.
+</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube-nocookie.com/embed/R-1Hh--SrX0?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 7 -->
+<div class="section-box">
+<a href="Q1L7.pdf" target="_blank">Lesson 7: Email Feedback and Complex Forms</a>
+<p>
+The final lesson teaches how to create an email feedback form, which serves as a communication bridge between website visitors and owners. These forms allow visitors to submit questions or comments that are forwarded directly to a specified email address.
+<br><br>
+Lesson 7 emphasizes the practical application of previously learned tags to build a complete "Customer Information Form". By combining various input types and selection menus, designers can collect structured data from users in a professional and organized manner.</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube-nocookie.com/embed/mYNgNLmQ4Qc?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- BOTTOM GALLERY -->
+<div class="gallery-wrapper">
+  <div class="scroll-gallery">
+    <img src="14.png">
+    <img src="15.png">
+    <img src="16.png">
+    <img src="17.png">
+  </div>
+</div>
+<br><br>
+<h2>🍎 2ND Quarter ICT Lessons 🍎</h2>
+
+<!-- TOP GALLERY -->
+<div class="gallery-wrapper">
+  <div class="scroll-gallery">
+    <img src="https://myschoolhouse.in/admin-panel/assets/uploads_img/659f91c110fba_D_11_01_2024_T_06_59_13am.jpg">
+    <img src="https://codelucky.com/wp-content/uploads/2025/06/css-element-selectors.png">
+    <img src="https://www.scientecheasy.com/wp-content/uploads/2024/05/css-selector-example.png">
+    <img src="https://wikitechy.com/css/img/css/css-selectors.png">
+    <img src="https://codeandwork.github.io/courses/cs/media/css-selectors.jpg">
+  </div>
+</div>
+
+<!-- LESSON 1 -->
+<div class="section-box">
+<a href="Q2L1.pdf" target="_blank">Lesson 1 – Introduction to CSS</a>
+<p>
+This lesson explains what CSS (Cascading Style Sheets) is and why it is used. 
+It covers how CSS separates content from design, the three layers of a webpage 
+(content, presentation, behavior), and the advantages of using CSS such as 
+saving time, easier maintenance, better design flexibility, and improved accessibility.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/AGDDdsiZ0Ko?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- LESSON 2 -->
+<div class="section-box">
+<a href="Q2L2.pdf" target="_blank">Lesson 2 – Structure and Types of CSS</a>
+<p>
+This lesson focuses on the structure of CSS including selectors, properties, and values. 
+It introduces style sheets as sets of instructions for browsers and explains how CSS 
+separates content from appearance. It also covers the three types of CSS: external, 
+internal (embedded), and inline, along with their syntax, usage, and advantages.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/6EMkq7UqMGE?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- LESSON 3 -->
+<div class="section-box">
+<a href="Q2L3.pdf" target="_blank">Lesson 3 – Div and Span Tag</a>
+<p>
+This lesson provides practical examples of applying CSS through inline, internal, 
+and external styles. It introduces the display property and explains the difference 
+between block-level and inline elements. It also discusses the use of div and span 
+tags as container elements to structure webpages and apply targeted styles.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/WbnCll6vvw4?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- LESSON 4 -->
+<div class="section-box">
+<a href="Q2L4.pdf" target="_blank">Lesson 4 – CSS Rules, Properties, and Classes</a>
+<p>
+This lesson teaches how CSS rules are written with selectors and declarations. 
+It categorizes style properties (fonts, colors, text, layout, lists, etc.) 
+and introduces CSS classes. Students learn how to define and apply classes, 
+use element+class selectors, and group selectors for efficient styling. 
+It emphasizes reusability and precision in web design.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/ZNskBxLVOfs?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- LESSON 5 -->
+<div class="section-box">
+<a href="Lesson-5.pdf" target="_blank">Lesson 5 – CSS Selectors</a>
+<p>
+Lesson 5 discusses CSS selectors, which are used to identify and style 
+specific HTML elements. It introduces six main types: class, element (tag), 
+ID, universal, group, and attribute selectors—each serving a unique purpose 
+in web design. The lesson provides examples and explains when to use each selector.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/Z07d9Vu7GKM?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- LESSON 6 -->
+<div class="section-box">
+<a href="Lesson-6.pdf" target="_blank">Lesson 6 – CSS Behaviors</a>
+<p>
+Lesson 6 teaches how to use CSS to control the size and visibility of elements 
+on a webpage. It explains properties like width, height, and visibility to manage 
+how content appears. It also introduces pseudo-classes that change the style of 
+links when users hover, visit, or click them.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/Nrsy_2ogRfQ?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- BOTTOM GALLERY -->
+<div class="gallery-wrapper">
+  <div class="scroll-gallery">
+    <img src="https://kinsta.com/wp-content/uploads/2020/08/html-vs-css.png">
+    <img src="https://mason.gmu.edu/~kshiffl4/375/tutorial_stylesheets_file.png">
+    <img src="https://study.com/cimages/multimages/16/div1.png">
+    <img src="https://blog.infodiagram.com/wp-content/uploads/2019/05/layers_1-1024x595.png">
+  </div>
+</div>
+<br><br>
+<h2>🍎 3RD Quarter ICT Lessons 🍎</h2>
+
+<!-- LESSON 1 -->
+<div class="section-box">
+<a href="3QL1.pdf" target="_blank">Lesson 1: Formatting Text with CSS (Typography)</a>
+<p>
+Lesson 1 introduces the fundamental concepts of typography in web design, focusing on how CSS controls the styling and arrangement of text to ensure legibility and visual appeal. Key font properties covered include font-family for specifying typefaces, font-size for adjusting text dimensions in pixels or percentages, and font-weight for defining the thickness of characters. Additionally, students learn to use font-style for italics and font-variant for specialized glyphs like small-caps.Beyond font choice, the lesson explores various text properties that manage layout and spacing. These include line-height for vertical spacing, letter-spacing and word-spacing for horizontal gaps, and text-align for horizontal alignment. The lesson also details advanced controls such as white-space management, word-break rules, and text decorations like underlining or shadows, providing a comprehensive toolkit for precise text formatting.<p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube.com/embed/Yi_xWwind1s?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 2 -->
+<div class="section-box">
+<a href="3QL2.pdf" target="_blank">Lesson 2: Practical Formatting Applications</a>
+<p>
+Lesson 2 focuses on the practical application of text formatting techniques, emphasizing how to enhance specific parts of a web document. It covers essential tasks such as creating bold and italicized text, as well as indenting the first line of paragraphs using the text-indent property, which accepts measurements in various units like pixels or percentages. The lesson also teaches how to transform text cases—such as converting text to uppercase or lowercase—using the text-transform property.In addition to basic styling, this lesson introduces methods for improving the visual structure and readability of a page. It explains how to adjust line spacing with the line-height property and how to highlight specific text by adding a background color using the background property. These practical exercises are designed to help students apply CSS properties to real-world coding scenarios, ensuring they can effectively manage both the style and layout of their web content.</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube.com/embed/Dfj0B6aL7Hs?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 3 -->
+<div class="section-box">
+<a href="3QL3.pdf" target="_blank">Lesson 3: Formatting Layout with CSS (Box Model and Positioning)</a>
+<p>
+Lesson 3 centers on the "Box Model," a core concept where every element on a web page is treated as its own box consisting of margins, borders, padding, and the actual content. Students learn to control these dimensions using height and width properties, while organizing content with block-level tags like div, h1, and p. The lesson also introduces element positioning through four schemes: static, relative, absolute, and fixed, allowing for precise placement of objects on a page.The second half of the lesson expands on layout control through offset properties and float techniques. Offset properties (top, right, bottom, left) work with positioning to define exact distances between elements. Additionally, the lesson covers float for wrapping text around elements, and background properties, including setting background images, controlling their repetition via background-repeat, and specifying their location with background-position.</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube.com/embed/i1FeOOhNnwU?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- LESSON 4 -->
+<div class="section-box">
+<a href="3QL4.pdf" target="_blank">Lesson 4: Formatting Borders and Tables</a>
+<p>
+Lesson 4 explores the customization of borders and tables, teaching students how to define the appearance of element boundaries. It covers the border-width, border-color, and border-style properties, which allow for a wide range of visual effects such as solid, dashed, dotted, or 3D styles like "inset" and "outset". Students also learn how to apply these styles to specific sides of an element using individual properties like border-top-width or border-left.The lesson also introduces the concept of padding, which defines the internal space between an element's content and its border. While HTML padding is often limited to tables, CSS padding can be applied to various elements like paragraphs and images. Finally, the lesson touches upon table-specific styling, such as adding background colors to cells and using external CSS to style entire table structures for a professional look.</p>
+</div>
+<div class="video-wrap">
+  <iframe 
+    src="https://www.youtube.com/embed/dIUOWdwwZBw?rel=0&modestbranding=1" 
+    allowfullscreen>
+  </iframe>
+</div>
+<br>
+<h2>🍎 3RD Quarter Browser Outputs 🍎</h2>
+<div class="gallery">
+  <img src="41.png">
+  <img src="42.png">
+  <img src="43.png">
+  <img src="44.png">
+</div>
+</section>
+
+<section>
+
+<h2>🍎 4TH Quarter ICT Lessons 🍎</h2>
+
+<!-- LESSON 1 -->
+<div class="section-box">
+<a href="4QL1.pdf" target="_blank">Lesson 1: Introduction to JavaScript</a>
+<p>
+JavaScript is a widely-used, client-side scripting language designed to create dynamic and interactive user experiences on the web. As an interpreted, high-level, and object-oriented language, it allows developers to handle tasks ranging from UI rendering and real-time content updates to tracking user activity. Unlike traditional programming languages, JavaScript code is visible within the page's source and requires a web browser to execute. It is characterized by its case-sensitivity and loose typing, meaning variables do not need a predefined data type. To implement JavaScript, code is typically placed between script tags, and the document.write command is frequently used to display output directly onto the webpage.
+<br><br>
+However, the power of JavaScript comes with distinct security considerations that every developer must acknowledge. Because the code is delivered directly to the client's browser, it is impossible for a website author to perfectly conceal how the logic operates. Determined adversaries can view, copy, or even reverse-engineer source code that has been deliberately obfuscated. Therefore, developers should never embed sensitive secrets—such as proprietary algorithms or private access keys—directly into client-side JavaScript, as they will remain exposed to potential threats.
+<p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/zofMnllkVfI?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- LESSON 2 -->
+<div class="section-box">
+<a href="4QL2.pdf" target="_blank">Lesson 2: Script Placement and Guidelines</a>
+<p>
+The placement of JavaScript within an HTML document significantly affects when the code is executed. Scripts placed in the <head> section are pre-loaded and usually contain functions intended to be called later, while scripts in the <body> section execute immediately as the page loads. For better organization across multiple pages, developers often use external .js files linked via the src attribute. When writing code, specific guidelines must be followed: JavaScript is strictly case-sensitive (e.g., "myHome" is different from "MyHome"), it ignores white space within lines which allows for better readability, and long lines can be broken using a backslash. Additionally, comments can be added using // for single lines or /* */ for multi-line blocks to explain the code.
+<br><br>
+Maintaining these guidelines is essential for long-term project viability and error prevention. When breaking up long lines of code, it is crucial to use the backslash (\) correctly, as breaking the line in the middle of a command or a string will cause the script to fail. Furthermore, while the language is forgiving regarding white space, developers are encouraged to use it strategically to structure their code for clarity. Consistent documentation through comments ensures that even if you return to a script weeks later, you can easily trace your logic and troubleshoot any issues that may have developed.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/W6NZfCO5SIk?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- LESSON 3 -->
+<div class="section-box">
+<a href="4QL3.pdf" target="_blank">Lesson 3: Characteristics and Components of JavaScript</a>
+<p>
+JavaScript functions as an interpreted scripting language, meaning it relies on a host environment like a browser rather than having its own standalone interface. It is built on an object-oriented model where "Objects" represent items in the browser (such as the Window, Document, or Math objects) that possess specific "Properties" (characteristics) and "Methods" (actions). Data is managed using variables, which are declared with the var keyword and can hold various data types including Strings, Numbers, Booleans, Undefined, or Null. When naming these variables, they must start with a letter or underscore, contain no spaces or punctuation, and avoid using reserved JavaScript keywords.
+<br><br>
+A fundamental aspect of managing these components is understanding how variables interact with memory and scope. Variables declared with the var statement provide the flexibility to store data temporarily, but they must strictly follow naming conventions; specifically, they cannot begin with a digit or include special punctuation. By pre-defining these variables at the start of your script or function, you improve your code's stability. Because JavaScript is a dynamically typed language, the same variable can be assigned an integer at one moment and a string at another, requiring the programmer to stay organized as the complexity of the data grows.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/lkIFF4maKMU?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+
+<!-- LESSON 4 -->
+<div class="section-box">
+<a href="4QL4.pdf" target="_blank">Lesson 4: Events, Popup Boxes, and Conditionals</a>
+<p>
+Interactivity in JavaScript is driven by "Events," which are user-triggered actions such as clicking a mouse (onclick), loading a page (onload), or changing a field (onchange). To communicate with users, JavaScript employs three types of popup boxes: Alert boxes for messages, Confirm boxes for verification, and Prompt boxes for gathering input. Beyond simple interaction, the language uses conditional logic to control the flow of a program. This is achieved through if, else if, and else blocks, which execute specific code only when certain conditions are met. For more complex scenarios involving a single variable with multiple possible values, the switch statement provides an efficient alternative to nested conditional blocks.
+<br> <br>
+Events serve as the essential "force" that triggers these functions to run; without them, a script would essentially remain static. When designing a webpage, you must map out which specific user actions—such as a keyboard stroke or a form submission—should trigger which piece of logic. Furthermore, when using conditional structures like the switch statement, it is important to include proper termination commands to prevent the code from executing multiple blocks unintentionally. By mastering these event-driven interactions and decision-making structures, you can create a highly responsive web interface that reacts intelligently to every user input.
+</p>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/YiOlaiscqDY?rel=0&modestbranding=1"
+allowfullscreen></iframe>
+</div>
+<br>
+<h2>🍎 4TH Quarter Browser Outputs 🍎</h2>
+<div class="gallery">
+  <img src="51.png">
+  <img src="52.png">
+  <img src="53.png">
+  <img src="54.png">
+</div>
+
+<div style="text-align:center;">
+<a href="about.html"><button class="back-btn">← Back</button></a>
+<a href="Events.html"><button class="next-btn">Next →</button></a>
+</div>
+
+</section>
+
+<script>
+function createApple(){
+  const apple=document.createElement("div");
+  apple.innerHTML="🍎";
+  apple.style.position="absolute";
+  apple.style.left=Math.random()*100+"vw";
+  apple.style.fontSize=Math.random()*30+20+"px";
+  apple.style.top="-50px";
+  apple.style.animation=`fall ${Math.random()*5+5}s linear`;
+  document.getElementById("apple-container").appendChild(apple);
+  setTimeout(()=>{apple.remove();},10000);
+}
+setInterval(createApple,800);
+
+const style=document.createElement('style');
+style.innerHTML=`@keyframes fall{to{transform:translateY(110vh);}}`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
